@@ -1,0 +1,52 @@
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+
+  section {
+    padding: 3rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #menuBtn {
+    display: inline-block;
+  }
+
+  .header {
+    padding: 2rem;
+
+    .navBar {
+      position: absolute;
+      top: 99%;
+      left: 0;
+      right: 0;
+      background: $blue;
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+      &.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      }
+
+      ul li {
+        width: 100%;
+        position: relative;
+      }
+    }
+  }
+
+  .home {
+    flex-direction: column;
+  }
+
+  .mainVid video {
+    width: 95%;
+    border-width: 0.2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 5%;
+  }
+}

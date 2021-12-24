@@ -1,0 +1,549 @@
+@import "./config";
+@import "./utilities";
+@import "./mobile";
+
+//******************  HOME PAGE STYLES *******************//
+
+.home {
+  display: flex;
+  align-items: center;
+  gap: 2.99rem;
+  flex-wrap: wrap;
+
+  .image {
+    flex: 1 1 41rem;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .content {
+    flex: 1 1 42rem;
+
+    h3 {
+      color: $black;
+      font-size: 5rem;
+    }
+
+    p {
+      color: $lightColor;
+      font-size: 1.5rem;
+      padding: 1rem 0;
+      line-height: 2.5;
+    }
+  }
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.99rem;
+  flex-wrap: wrap;
+
+  .box {
+    border-radius: 1rem;
+    background-color: $lightBg;
+    padding: 4rem 3rem;
+    text-align: center;
+
+    img {
+      height: 7rem;
+      margin-bottom: 2rem;
+    }
+
+    h3 {
+      font-size: 1.7rem;
+    }
+  }
+}
+
+//******************  ABOUT PAGE STYLES *******************//
+
+.heading {
+  background: url(../img/heading-bg.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  h3 {
+    font-size: 3.5rem;
+    color: $black;
+  }
+
+  p {
+    font-size: 1.6rem;
+    color: $lightColor;
+    padding-top: 0.5rem;
+
+    a {
+      padding-right: 0.5rem;
+      color: $pink;
+
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  gap: 2.99rem;
+  flex-wrap: wrap;
+
+  .content {
+    flex: 1 1 2rem;
+
+    h3 {
+      color: $black;
+      font-size: 4.5rem;
+    }
+
+    p {
+      font-size: 1.4rem;
+      padding: 1rem 0;
+      color: $lightColor;
+      line-height: 2.5;
+    }
+  }
+
+  image {
+    flex: 1 1 42rem;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+//******************  COURSE 1 PAGE STYLES *******************//
+
+.course1 {
+  display: grid;
+  // MAKING GRIDS RESPONSIVE
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+  grid-gap: 1rem;
+
+  .box {
+    background-color: $lightBg;
+    border-radius: 1rem;
+    text-align: center;
+    padding: 3rem 2rem;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    img {
+      margin-bottom: 1rem;
+      height: 9rem;
+    }
+
+    h3 {
+      font-size: 2rem;
+      color: $black;
+      padding: 0.5rem 0;
+    }
+
+    p {
+      font-size: 1.4rem;
+      color: $lightColor;
+      line-height: 2.5rem;
+      padding: 1rem 0;
+    }
+  }
+}
+
+//******************  COURSE 2 PAGE STYLES *******************//
+
+.course2 {
+  display: grid;
+  // // MAKING GRIDS RESPONSIVE
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1rem;
+  .box {
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: $lightBg;
+
+    .image {
+      margin-bottom: 2rem;
+      text-align: center;
+
+      img {
+        height: 22rem;
+      }
+    }
+
+    .content {
+      span {
+        color: $pink;
+        font-size: 1.4rem;
+        padding: 0.5rem 1rem;
+        background-color: $lightPink;
+      }
+
+      h3 {
+        color: $black;
+        line-height: 2;
+        margin-top: 1.5rem;
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1.4rem;
+        color: $lightColor;
+        line-height: 2.5;
+        padding: 1rem 0;
+      }
+
+      .icons {
+        margin-top: 2rem;
+        padding-top: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: $border;
+
+        a {
+          font-size: 1.4rem;
+          color: $lightColor;
+
+          &:hover {
+            color: $pink;
+          }
+
+          i {
+            padding-right: 0.5rem;
+            color: $pink;
+          }
+        }
+      }
+    }
+  }
+}
+
+//******************  COURSE 3 PAGE STYLES *******************//
+
+.course3 {
+  display: grid;
+  // // MAKING GRIDS RESPONSIVE
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1rem;
+
+  .box {
+    text-align: center;
+    overflow: hidden;
+
+    &hover .video video {
+      transform: scale(1.1);
+    }
+
+    .video {
+      height: 25rem;
+      width: 100%;
+      overflow: hidden;
+      border-radius: 0.5rem;
+
+      video {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        cursor: pointer;
+        position: relative;
+      }
+
+      i {
+        position: absolute;
+        top: 50%;
+        right: 50%;
+
+        font-size: 2rem;
+        height: 5rem;
+        width: 5rem;
+        line-height: 5rem;
+        border-radius: 50%;
+        background-color: $white;
+        color: $black;
+        pointer-events: none;
+
+        z-index: 10;
+      }
+    }
+
+    .content {
+      padding-top: 1rem;
+
+      h3 {
+        font-size: 1.7rem;
+        color: $black;
+        padding: 0.5rem 0;
+      }
+
+      p {
+        font-size: 1.5rem;
+        color: $lightColor;
+      }
+    }
+  }
+}
+
+.mainVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  background-color: rgba($color: #000000, $alpha: 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+
+  &:active {
+    display: flex;
+  }
+
+  #closeVid {
+    position: absolute;
+    top: 1.2rem;
+    right: 2.5rem;
+    font-size: 6rem;
+    color: $white;
+    cursor: pointer;
+  }
+
+  video {
+    width: 80%;
+    border-radius: 0.5rem;
+    border: 0.5rem solid $white;
+  }
+}
+
+//******************  TEACHERS PAGE STYLES *******************//
+.teachers {
+  display: grid;
+  // // MAKING GRIDS RESPONSIVE
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1rem;
+
+  .box {
+    text-align: center;
+    overflow: hidden;
+
+    &:hover .image {
+      .share {
+        transform: translateY(0);
+
+        a {
+          transform: translateY(-1rem);
+          opacity: 1;
+          transition: transform 0.2s 0.2s;
+        }
+      }
+    }
+
+    .image {
+      overflow: hidden;
+      height: 32rem;
+      width: 100%;
+      position: relative;
+      border-radius: 1rem;
+
+      .share {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        z-index: 10;
+        overflow: hidden;
+        transform: translateY(-100%);
+
+        a {
+          font-size: 2.5rem;
+          margin: 2rem 1.5rem;
+          color: $white;
+          transform: translateY(5rem);
+          opacity: 0;
+
+          &:hover {
+            color: $pink;
+          }
+        }
+      }
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .content {
+      padding-top: 1rem;
+
+      h3 {
+        font-size: 2rem;
+        color: $black;
+      }
+
+      span {
+        color: $lightColor;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+//******************  BLOG PAGE STYLES **********************//
+
+.blog {
+  display: grid;
+  // // MAKING GRIDS RESPONSIVE
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1rem;
+
+  .box {
+    .image {
+      height: 25rem;
+      width: 100%;
+      overflow: hidden;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 0.5rem;
+      }
+    }
+
+    .content {
+      padding: 2rem;
+      background: $lightBg;
+      .icons {
+        padding: 1.5rem 0;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        a {
+          font-size: 1.4rem;
+          color: $lightColor;
+
+          &:hover {
+            color: $blue;
+          }
+
+          i {
+            color: $blue;
+            padding-right: 0.5rem;
+          }
+        }
+      }
+
+      h3 {
+        font-size: 1.7rem;
+        padding: 0.5rem 0;
+        color: $black;
+      }
+
+      p {
+        padding: 1rem 0;
+        font-size: 1.5rem;
+        line-height: 2.5;
+        color: $lightColor;
+      }
+    }
+  }
+}
+
+//******************  CONTACT PAGE STYLES *******************//
+
+.contact {
+  .iconsContainer {
+    display: grid;
+    // // MAKING GRIDS RESPONSIVE
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 3rem;
+    margin-bottom: 1.78rem;
+  }
+
+  .icons {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 1rem;
+    background: $lightBg;
+
+    i {
+      height: 6.5rem;
+      width: 6.5rem;
+      line-height: 6.5rem;
+      font-size: 2.5rem;
+      color: $blue;
+      background-color: $lightBlue;
+      border-radius: 50%;
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+
+    h3 {
+      font-size: 2.66rem;
+      color: $black;
+      padding: 0.7rem;
+    }
+
+    p {
+      line-height: 2;
+      font-size: 1.5rem;
+      color: $lightColor;
+    }
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+    form {
+      flex: 1 1 42rem;
+      border-radius: 1rem;
+      background: $lightBg;
+      padding: 2rem;
+
+      h3 {
+        font-size: 3rem;
+        color: $black;
+        margin-bottom: 1rem;
+      }
+
+      .box,
+      textarea {
+        width: 100%;
+        padding: 1rem 1.2rem;
+        font-size: 1.6rem;
+        color: $lightColor;
+        text-transform: none;
+        margin: 1rem 0;
+        border-radius: 0.5rem;
+        background: $white;
+      }
+
+      textarea {
+        resize: none;
+      }
+    }
+    .map {
+      flex: 1 1 42rem;
+      width: 100%;
+      border-radius: 1rem;
+    }
+  }
+}
